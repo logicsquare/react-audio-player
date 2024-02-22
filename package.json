@@ -1,0 +1,52 @@
+{
+  "name": "@logicsquare/react-audio-player",
+  "version": "1.0.0",
+  "description": "A custom audio player written in TypeScript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "run-p build:d.ts build:umd build:css",
+    "build:d.ts": "tsc",
+    "build:umd": "webpack",
+    "build:css": "sass --no-source-map src/assets/styles/styles.scss dist/assets/styles/styles.css"
+  },
+  "keywords": [
+    "react",
+    "media",
+    "player",
+    "audio",
+    "react-component"
+  ],
+  "author": "Logic Square Technologies",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "css-loader": "^6.10.0",
+    "file-loader": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "files": [
+    "./dist/",
+    "README.md"
+  ]
+}

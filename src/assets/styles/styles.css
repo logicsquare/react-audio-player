@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --theme-color: #000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.audioPlayerWrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto;
+  outline: none;
+}
+.audioPlayerWrap .audioThumbnailWrap {
+  position: relative;
+  max-width: 100%;
+  height: 366px;
+}
+.audioPlayerWrap .audioThumbnailWrap img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+}
+.audioPlayerWrap .audioInfo {
+  padding: 16px 8px 11px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.audioPlayerWrap .audioInfo h5 {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: 500;
+  margin-top: 0;
+}
+.audioPlayerWrap .audioInfo h5,
+.audioPlayerWrap .audioInfo p {
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-height: 18px;
+  max-height: 18px;
+  -webkit-box-orient: vertical;
+}
+.audioPlayerWrap .audioInfo p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 0;
+  line-height: 16px;
+  max-height: 16px;
+  color: #828282;
+}
+.audioPlayerWrap .audioControlsWrap {
+  display: flex;
+  align-items: center;
+  padding: 45px 5px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  /* Thumb: webkit */
+  /* Thumb: Firefox */
+}
+.audioPlayerWrap .audioControlsWrap .audioSeekBarWrap {
+  max-width: 100%;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: 0;
+  padding-inline: 6px;
+}
+.audioPlayerWrap .audioControlsWrap input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  margin: 0;
+  background-color: #e5e5e5;
+}
+.audioPlayerWrap .audioControlsWrap input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  border: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.audioPlayerWrap .audioControlsWrap input[type=range]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  border: none;
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.audioPlayerWrap .audioControlsWrap .prevNextBtn {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+}
+.audioPlayerWrap .audioControlsWrap .prevNextBtn .icon {
+  height: 23px;
+  color: var(--theme-color);
+}
+.audioPlayerWrap .audioControlsWrap .playPauseBtn {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  outline: none;
+}
+.audioPlayerWrap .audioControlsWrap .playPauseBtn .icon {
+  height: 23px;
+  color: var(--theme-color);
+}
+.audioPlayerWrap .audioControlsWrap .playPauseBtn .iconPause {
+  height: 25px;
+}
+.audioPlayerWrap .audioControlsWrap .audioDuration {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.audioPlayerWrap .audioControlsWrap .playbackRate {
+  margin-left: 5rem;
+  padding: 0.5em;
+  font-size: 14px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  outline: none;
+  border-color: var(--theme-color);
+  color: var(--theme-color);
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume {
+  display: flex;
+  margin-left: auto;
+  position: relative;
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume .dragHandle {
+  width: 65px;
+  border-radius: 20px;
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume .audioSeekBar {
+  width: 65px;
+  display: none;
+  transition: all 0.3s;
+  margin-right: 2px;
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume .muteUnmuteBtn {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume .muteUnmuteBtn .icon {
+  height: 23px;
+  color: var(--theme-color);
+}
+.audioPlayerWrap .audioControlsWrap .audioVolume:hover .audioSeekBar {
+  display: block;
+  transition: all 0.3s;
+}
+.audioPlayerWrap .audioControlsWrap .prevNextBtn,
+.audioPlayerWrap .audioControlsWrap .playPauseBtn,
+.audioPlayerWrap .audioControlsWrap .muteUnmuteBtn {
+  margin: 0 4px;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 575.98px) {
+  .audioPlayerWrap .audioThumbnailWrap {
+    height: 276px;
+  }
+  .audioPlayerWrap .audioThumbnailWrap img {
+    height: 210px;
+    border-radius: 0;
+  }
+  .audioPlayerWrap .audioControlsWrap {
+    width: calc(100% - 10px);
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 6px;
+  }
+  .audioPlayerWrap .audioControlsWrap .audioVolume:hover .audioSeekBar {
+    display: none;
+  }
+  .audioPlayerWrap .audioControlsWrap .prevNextBtn .icon,
+  .audioPlayerWrap .audioControlsWrap .playPauseBtn .icon,
+  .audioPlayerWrap .audioControlsWrap .audioVolume .muteUnmuteBtn .icon {
+    height: 20px;
+  }
+  .audioPlayerWrap .audioControlsWrap .prevNextBtn .iconPause,
+  .audioPlayerWrap .audioControlsWrap .playPauseBtn .iconPause,
+  .audioPlayerWrap .audioControlsWrap .audioVolume .muteUnmuteBtn .iconPause {
+    height: 22px;
+  }
+  .audioPlayerWrap .audioControlsWrap .prevNextBtn,
+  .audioPlayerWrap .audioControlsWrap .playPauseBtn,
+  .audioPlayerWrap .audioControlsWrap .muteUnmuteBtn {
+    margin: 0 2px;
+  }
+  .audioPlayerWrap .audioControlsWrap .audioDuration {
+    font-size: 12px;
+    margin-top: 1px;
+  }
+}/*# sourceMappingURL=styles.css.map */
