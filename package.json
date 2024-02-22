@@ -1,9 +1,13 @@
 {
   "name": "@logicsquare/react-audio-player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom audio player written in TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/logicsquare/react-audio-player.git"
+  },
   "scripts": {
     "build": "run-p build:d.ts build:umd build:css",
     "build:d.ts": "tsc",
@@ -47,6 +51,7 @@
   },
   "files": [
     "./dist/",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ]
 }
