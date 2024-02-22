@@ -1,9 +1,8 @@
 # React Audio Player
 
 <a href="https://www.npmjs.com/package/@logicsquare/react-audio-player" title="MIT License">
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen
-" alt="MIT License">
-  </a>
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="MIT License" />
+</a>
 
 - Custom audio player component with support for different browsers.
 - Written in TypeScript
